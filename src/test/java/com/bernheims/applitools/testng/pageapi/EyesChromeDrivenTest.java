@@ -49,7 +49,7 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
     protected static final String defaultBatchName = "PageObject API Selenium Chromedriver with Eyes Test";
     protected static String appName;
     protected static String batchName;
-    protected static Optional<String> batchId;
+    //protected static Optional<String> batchId;
     
     protected Optional<String> suiteBatchName() {
         return Optional.ofNullable(suiteName.startsWith("Default suite") ? null : suiteName);
@@ -96,7 +96,7 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
 	*/
 
         // Use the batchId set by the Applitools Jenkins plug-in if defined,
-        batchId = getSetting("applitools.api.batch.id", "APPLITOOLS_BATCH_ID");
+        //batchId = getSetting("applitools.api.batch.id", "APPLITOOLS_BATCH_ID");
 
         // Use the batchName set by the Applitools Jenkins plug-in if defined,
         // or the TestNG suite name if is it not the default "Default suite" name,
@@ -125,10 +125,10 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
         BatchInfo batch = new BatchInfo(batchName);
 
         // Use the batch ID set by the Applitools Jenkins plug-in if it is set
-        if (settingIsNotBlank(batchId)) {
+        /*if (settingIsNotBlank(batchId)) {
             batch.setId(batchId.get());
             System.out.printf("BeforeSuite : %s - setting batch id '%s'\n", thisMethod, batch.getId());
-        }
+        }*/
 
         return batch;
     }
