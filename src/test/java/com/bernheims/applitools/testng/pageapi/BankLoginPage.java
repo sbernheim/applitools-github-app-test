@@ -3,9 +3,10 @@ package com.bernheims.applitools.testng.pageapi;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 import com.applitools.eyes.selenium.Eyes;
+
+import dev.failsafe.internal.util.Assert;
 
 public class BankLoginPage extends EyesPageObject {
 
@@ -25,7 +26,7 @@ public class BankLoginPage extends EyesPageObject {
 	}
 	
 	public BankLoginPage checkLoginForm() {
-		Assert.assertTrue(loginButton.isDisplayed(), String.format("%s login button is not visible", pageName()));
+		Assert.isTrue(loginButton.isDisplayed(), String.format("%s login button is not visible", pageName()));
 		check();
 		return this;
 	}

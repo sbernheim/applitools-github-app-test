@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="PageObject API TestNG Example Suite" verbose="1" thread-count="4" parallel="methods">
-   <!-- test name="Example Bank Login Tests">
+   <test name="Example Bank Login Tests">
       <classes>
          <class name="com.bernheims.applitools.testng.pageapi.BankLoginTest"/>
       </classes>
-   </test -->
+   </test>
    <test name="Keypress Tests">
       <classes>
          <class name="com.bernheims.applitools.testng.pageapi.KeypressTest"/>

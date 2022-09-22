@@ -27,7 +27,7 @@ import com.applitools.eyes.selenium.Eyes;
 public class EyesChromeDrivenTest extends ChromeDrivenTest {
 
     // Test control inputs to read once and share for all tests
-    protected static String applitoolsApiKey;
+    //protected static String applitoolsApiKey;
     //protected static Optional<String> branchName;
     //protected static Optional<String> baselineEnvironment;
     //protected static Optional<String> mobileBaselineEnvironment;
@@ -61,7 +61,7 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
         // Read the Applitools API key from a System property or environment variable.
         // To find your Applitools API key:
         // https://applitools.com/tutorials/getting-started/setting-up-your-environment.html
-        applitoolsApiKey = getSetting("applitools.api.key", "APPLITOOLS_API_KEY")
+        String applitoolsApiKey = getSetting("applitools.api.key", "APPLITOOLS_API_KEY")
                 .orElseThrow(() -> new RuntimeException("The APPLITOOLS_API_KEY environment variable is not set!"));
         System.out.printf("BeforeSuite : %s - found APPLITOOLS_API_KEY '%s'\n", thisMethod, applitoolsApiKey);
 
@@ -151,13 +151,12 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
         // Set the Applitools API key so test results are uploaded to your account.
         // If you don't explicitly set the API key with this call,
         // then the SDK will automatically read the `APPLITOOLS_API_KEY` environment variable to fetch it.
-        System.out.printf("BeforeSuite : %s - setting API key\n", thisMethod);
+        /*System.out.printf("BeforeSuite : %s - setting API key\n", thisMethod);
         config.setApiKey(applitoolsApiKey);
-        System.out.printf("BeforeSuite : %s - API key set '%s'\n", thisMethod, applitoolsApiKey);
+        System.out.printf("BeforeSuite : %s - API key set '%s'\n", thisMethod, applitoolsApiKey);*/
 
-        /* Use this to disable eyes tests for eyes-selenium-java5 */
         if (isDisabled) {
-            //config.setIsDisabled(true);
+            config.setIsDisabled(true);
             System.out.printf("BeforeSuite : %s -\n\n\tNOTE: Applitools Eyes API calls are disabled!!!  <-------- %b\n\n", thisMethod, isDisabled);
         }
 
@@ -218,11 +217,10 @@ public class EyesChromeDrivenTest extends ChromeDrivenTest {
             eyes.setMatchLevel(MatchLevel.LAYOUT2);
         } */
         
-        /* Use this to disable eyes tests for eyes-selenium-java3 */
-        if (isDisabled) {
+        /*if (isDisabled) {
             eyes.setIsDisabled(true);
             System.out.printf("NOTE: Applitools Eyes API calls are disabled!!!  <-------- %b\n", isDisabled);
-        }
+        }*/
         
         // Open Eyes to start visual testing.
         // It is a recommended practice to set all four inputs:
