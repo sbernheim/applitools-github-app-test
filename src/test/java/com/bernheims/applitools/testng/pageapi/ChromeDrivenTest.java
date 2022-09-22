@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.StackWalker.Option;
 import java.lang.reflect.Method;
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.apache.commons.io.FileUtils;
@@ -115,10 +115,10 @@ public class ChromeDrivenTest {
         // For larger projects, use explicit waits for better control.
         // https://www.selenium.dev/documentation/webdriver/waits/
         // The following call works for Selenium 4:
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWaitSeconds));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWaitSeconds));
 
         // If you are using Selenium 3, use the following call instead:
-        driver.manage().timeouts().implicitlyWait(implicitWaitSeconds, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(implicitWaitSeconds, TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod

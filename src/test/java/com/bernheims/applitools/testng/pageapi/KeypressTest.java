@@ -23,9 +23,8 @@ public class KeypressTest extends EyesChromeDrivenTest {
             //.changePageBackground("PALEGREEN")
             //.changeResultBackground("LIGHTBLUE")
             //.changeResultColor("BLACK")
-            .changeResultColor("DARKRED")
+            //.changeResultColor("DARKRED")
             //.changeResultColor("BLUE")
-            //.changeResultColor("ORANGE")
             .checkResult(expected);
             //.saveScreenshot();
     }
@@ -35,10 +34,10 @@ public class KeypressTest extends EyesChromeDrivenTest {
         return new Object[][] {
             new Object[] {
                     "a", "a", "A"
-            /* }, new Object[] {
+            }, new Object[] {
                     "y", "y", "Y"
             }, new Object[] {
-                    "Z", "Z", "Z" */
+                    "Z", "Z", "Z"
             }
         };
     }

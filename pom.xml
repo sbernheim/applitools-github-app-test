@@ -14,7 +14,7 @@
 	</properties>
 
 	<dependencies>
-		<!-- dependency>
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.1.4</version>
@@ -25,13 +25,13 @@
 			<artifactId>eyes-selenium-java5</artifactId>
 			<version>5.16.0</version>
 			<scope>test</scope>
-		</dependency -->
-		<dependency>
+		</dependency>
+		<!-- dependency>
 			<groupId>com.applitools</groupId>
 			<artifactId>eyes-selenium-java3</artifactId>
 			<version>3.213.0</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>

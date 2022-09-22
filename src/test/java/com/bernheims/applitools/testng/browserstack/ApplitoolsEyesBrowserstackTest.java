@@ -3,9 +3,8 @@ package com.bernheims.applitools.testng.browserstack;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
-
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResultsSummary;
@@ -160,10 +159,10 @@ public class ApplitoolsEyesBrowserstackTest {
         // For larger projects, use explicit waits for better control.
         // https://www.selenium.dev/documentation/webdriver/waits/
         // The following call works for Selenium 4:
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         // If you are using Selenium 3, use the following call instead:
-        driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 
         // Create the Applitools Eyes object connected to the VisualGridRunner and set its configuration.
         eyes = new Eyes(runner);
