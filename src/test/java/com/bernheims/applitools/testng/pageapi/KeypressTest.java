@@ -22,8 +22,8 @@ public class KeypressTest extends EyesChromeDrivenTest {
             .pressKey(pressKey)
             //.changePageBackground("PALEGREEN")
             //.changeResultBackground("LIGHTBLUE")
-            .changeResultColor("BLACK")
-            //.changeResultColor("DARKRED")
+            //.changeResultColor("BLACK")
+            .changeResultColor("DARKRED")
             //.changeResultColor("BLUE")
             .checkResult(expected);
             //.saveScreenshot();
