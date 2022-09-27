@@ -23,8 +23,8 @@ public class KeypressTest extends EyesChromeDrivenTest {
             //.changePageBackground("PALEGREEN")
             //.changeResultBackground("LIGHTBLUE")
             //.changeResultColor("BLACK")
-            .changeResultColor("DARKRED")
-            //.changeResultColor("BLUE")
+            //.changeResultColor("DARKRED")
+            .changeResultColor("BLUE")
             .checkResult(expected);
             //.saveScreenshot();
     }
