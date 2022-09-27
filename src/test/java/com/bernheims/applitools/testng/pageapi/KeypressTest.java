@@ -20,11 +20,11 @@ public class KeypressTest extends EyesChromeDrivenTest {
         new KeypressPage(driver, eyes)
             .checkPageLoaded()
             .pressKey(pressKey)
-            .changePageBackground("PALEGREEN")
+            //.changePageBackground("PALEGREEN")
             //.changeResultBackground("LIGHTBLUE")
             //.changeResultColor("BLACK")
             //.changeResultColor("DARKRED")
-            //.changeResultColor("BLUE")
+            .changeResultColor("BLUE")
             .checkResult(expected);
             //.saveScreenshot();
     }
