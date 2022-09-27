@@ -1,8 +1,5 @@
 name: Run Maven Test
 on:
-  push:
-    branches:
-      - push-event-test*
   pull_request:
     branches:
       - main
@@ -12,7 +9,7 @@ on:
       - synchronized
 env:
   APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
-  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha }}
   APPLITOOLS_SERVER_URL : 'eyesapi.applitools.com'
   APPLITOOLS_DISABLED: 'false'
 jobs:
